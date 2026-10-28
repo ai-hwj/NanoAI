@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!--取消android9的https强制支持 -->
+    <base-config cleartextTrafficPermitted="true" >
+<!--高版本的捉包证书通过，不然就算手机装了证书，捉包软件依然报错configure your browser or application to trust the Charles-->
+        <trust-anchors>
+
+            <certificates src= "system"/>
+
+            <certificates src= "user"/>
+
+        </trust-anchors>
+    </base-config>
+</network-security-config>

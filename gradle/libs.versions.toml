@@ -1,0 +1,127 @@
+[versions]
+agp = "9.3.1"
+kotlin = "2.4.10"
+ksp = "2.3.6"
+coreKtx = "1.18.0"
+junit = "4.13.2"
+junitVersion = "1.1.5"
+espressoCore = "3.5.1"
+appcompat = "1.7.1"
+material = "1.14.0"
+
+lifecycleRuntimeKtx = "2.11.0"
+activityCompose = "1.13.0"
+kotlinxCoroutines = "1.9.0"
+kotlinx_serialization = "1.11.0"
+composeBom = "2026.03.00"
+markdown_renderer = "0.45.0"
+coil3_okhttp = "3.5.0"
+filekit = "0.15.0"
+koin = "4.0.0"
+navigation3_ui = "1.1.1"
+lifecycle = "2.10.0"
+litertlm = "0.17.1"
+okhttp = "4.12.0"
+testjson = "20260814"
+adk = "1.4.0"
+androidx-room = "2.8.4"
+jsoup = "1.21.2"
+flexmark = "0.64.8"
+
+
+[libraries]
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+org-json = { group = "org.json", name = "json", version.ref = "testjson" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+
+kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "kotlinxCoroutines" }
+androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+androidx-compose-ui = { group = "androidx.compose.ui", name = "ui" }
+androidx-compose-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+androidx-compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+androidx-compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+androidx-compose-foundation = { module = "androidx.compose.foundation:foundation" }
+androidx-compose-foundation-layout = { module = "androidx.compose.foundation:foundation-layout" }
+androidx-compose-material3 = { group = "androidx.compose.material3", name = "material3" }
+androidx-compose-material-icons-extended = { module = "androidx.compose.material:material-icons-extended" }
+androidx-compose-runtime = { module = "androidx.compose.runtime:runtime" }
+
+# ---- AndroidX ----
+androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
+androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycle" }
+navigation3-ui = { module = "org.jetbrains.androidx.navigation3:navigation3-ui", version.ref = "navigation3_ui" }
+
+# ---- KotlinX ----
+kotlinx-serialization-core = { module = "org.jetbrains.kotlinx:kotlinx-serialization-core", version.ref = "kotlinx_serialization" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx_serialization" }
+
+# ---- Koin ----
+koin-bom = { module = "io.insert-koin:koin-bom", version.ref = "koin" }
+koin-androidx-compose = { module = "io.insert-koin:koin-androidx-compose" }
+koin-core-coroutines = { module = "io.insert-koin:koin-core-coroutines" }
+
+# ---- markdown渲染 ----
+markdown-renderer-m3 = { module = "com.mikepenz:multiplatform-markdown-renderer-m3", version.ref = "markdown_renderer" }
+markdown-renderer-coil3 = { module = "com.mikepenz:multiplatform-markdown-renderer-coil3", version.ref = "markdown_renderer" }
+coil3-network-okhttp = { module = "io.coil-kt.coil3:coil-network-okhttp", version.ref = "coil3_okhttp" }
+
+# ---- OkHttp (direct: cloud chat SSE streaming) ----
+okhttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp" }
+
+#---- 文件选择器 ----
+file-picker = { module = "io.github.vinceglb:filekit-core", version.ref = "filekit" }
+file-dialog = { module = "io.github.vinceglb:filekit-dialogs", version.ref = "filekit" }
+file-dialog-compose = { module = "io.github.vinceglb:filekit-dialogs-compose", version.ref = "filekit" }
+file-coil = { module = "io.github.vinceglb:filekit-coil", version.ref = "filekit" }
+
+# ---- Agent Developer  ----
+adk-core = { module = "com.google.adk:google-adk-kotlin-core", version.ref = "adk" }
+adk-processor = { module = "com.google.adk:google-adk-kotlin-processor", version.ref = "adk" }
+adk-litertlm = { module = "com.google.adk:google-adk-kotlin-litertlm", version.ref = "adk" }
+google-litertlm = { group = "com.google.ai.edge.litertlm", name = "litertlm-android", version.ref = "litertlm" }
+
+# ---- Room（与 ADK 同一套经典 androidx.room，不是 androidx.room3）----
+androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "androidx-room" }
+androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "androidx-room" }
+androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "androidx-room" }
+
+# ---- 网页抓取/解析（联网搜索与正文提取）----
+# jsoup 负责发请求 + CSS 选择器定位；flexmark 负责 HTML -> Markdown。
+# 两者都不是 Android 专用库，纯 JVM 实现，在端上直接可用。
+jsoup = { module = "org.jsoup:jsoup", version.ref = "jsoup" }
+flexmark-html2md = { module = "com.vladsch.flexmark:flexmark-html2md-converter", version.ref = "flexmark" }
+
+[bundles]
+compose-ui = [
+    "androidx-compose-foundation-layout",
+    "androidx-compose-foundation",
+    "androidx-compose-ui",
+    "androidx-compose-ui-graphics",
+    "androidx-compose-ui-tooling",
+    "androidx-compose-ui-tooling-preview",
+    "androidx-compose-material3",
+    "androidx-compose-material-icons-extended",
+    "androidx-compose-runtime"
+]
+lifecycle = [
+    "androidx-lifecycle-viewmodel-ktx",
+    "androidx-lifecycle-viewmodel-compose"
+]
+markdown = [
+    "markdown-renderer-m3",
+    "markdown-renderer-coil3"
+]
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+kotlinxSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+
